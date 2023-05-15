@@ -28,7 +28,7 @@ public interface IGraph<V> {
 
     List<V> dfs(V source);
 
-    List<V> bfs();
+    List<V> bfs(V source);
 
     void printGraph();
 }

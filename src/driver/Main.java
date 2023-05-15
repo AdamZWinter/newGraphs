@@ -40,5 +40,8 @@ public class Main {
 
         List<Integer> dfs = graph.dfs(4);
         System.out.println(dfs);
+
+        List<Integer> bfs = graph.bfs(4);
+        System.out.println(bfs);
     }
 }

@@ -12,15 +12,20 @@ public class DirectedGraphAL<V> implements IGraph<V> {
 
     @Override
     public void addVertex(V vertex) {
-        if(containsVertex(vertex))throw new DuplicateException("Duplicate vertex");
+        if(containsVertex(vertex)) {
+            throw new DuplicateException("Duplicate vertex");
+        }
 
         adjLists.put(vertex, null);
     }
 
     @Override
     public void addEdge(V source, V destination) {
-        if(!containsVertex(source) || !containsVertex(destination))throw new NoSuchElementException("no such Vertex");
-        else if(containsEdge(source, destination))throw new DuplicateException("Duplicate edge");
+        if(!containsVertex(source) || !containsVertex(destination)) {
+            throw new NoSuchElementException("no such Vertex");
+        } else if(containsEdge(source, destination)) {
+            throw new DuplicateException("Duplicate edge");
+        }
 
         Node head = adjLists.get(source);
         if(head == null){
@@ -42,7 +47,9 @@ public class DirectedGraphAL<V> implements IGraph<V> {
 
     @Override
     public boolean containsEdge(V source, V destination) {
-        if(!containsVertex(source))return false;
+        if(!containsVertex(source)) {
+            return false;
+        }
         Node node = adjLists.get(source);
         while(node != null){
             if(node.vertex.equals(destination)){
@@ -128,9 +135,24 @@ public class DirectedGraphAL<V> implements IGraph<V> {
     }
 
     @Override
-    public List<V> bfs() {
+    public List<V> bfs(V source) {
         Set<V> seen = new HashSet<>();
         List<V> traversal = new ArrayList<>();
+        Queue<V> vertexQueue = new LinkedList<>();
+
+        vertexQueue.add(source);
+        while(!vertexQueue.isEmpty()){
+            V current = vertexQueue.remove();
+            if(!seen.contains(current)){
+                traversal.add(current);
+                seen.add(current);
+                Node head = adjLists.get(current);
+                while(head !=null){
+                    vertexQueue.add(head.vertex);
+                    head = head.next;
+                }
+            }
+        }
         return traversal;
     }
 
