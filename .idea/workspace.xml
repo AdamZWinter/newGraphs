@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa23b989-21f3-4ee1-9809-441ddf14c1b6" name="Changes" comment="first commit">
+    <list default="true" id="fa23b989-21f3-4ee1-9809-441ddf14c1b6" name="Changes" comment="now with bfs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ADT/IGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ADT/IGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphs/DirectedGraphAL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphs/DirectedGraphAL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/driver/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/driver/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +76,7 @@
       <updated>1683144493223</updated>
       <workItem from="1683144494324" duration="9991000" />
       <workItem from="1684181650358" duration="136000" />
-      <workItem from="1684184960502" duration="846000" />
+      <workItem from="1684184960502" duration="4288000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1683751843514</created>
@@ -86,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683751843514</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="now with bfs">
+      <created>1684185979170</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684185979170</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,6 +100,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="now with bfs" />
+    <option name="LAST_COMMIT_MESSAGE" value="now with bfs" />
   </component>
 </project>
